@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.0.0" client="site" method="upgrade">
+    <name>Language Flag</name>
+    <author>Sagar Gurnani</author>
+    <version>1.0.0</version>
+    <description>A simple language flag module.</description>
+    <files>
+        <filename>mod_languageflag.xml</filename>
+        <filename module="mod_languageflag">mod_languageflag.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <filename>tmpl/default.php</filename>
+        <filename>tmpl/index.html</filename>
+    </files>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field
+                    name="catid"
+                    type="category"
+                    label="JCATEGORY"
+                    description="MOD_LATEST_NEWS_FIELD_CATEGORY_DESC"
+                    extension="com_content"
+                    multiple="true"
+                    size="10"
+                    default=""
+                    >
+                    <option value="">JOPTION_ALL_CATEGORIES</option>
+                </field>
+                <field
+                    name="count"
+                    type="number"
+                    label="Number of articles"
+                    description="Number of articles"
+                    default="5"
+                >
+                </field>
+            </fieldset>
+        </fields>
+        <fields name="params">
+            <fieldset name="advanced">
+                <field
+                    name="layout"
+                    type="modulelayout"
+                    label="JFIELD_ALT_LAYOUT_LABEL"
+                    description="JFIELD_ALT_MODULE_LAYOUT_DESC"
+                />
+            </fieldset>
+        </fields>
+    </config>
+</extension>
